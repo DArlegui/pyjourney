@@ -49,3 +49,44 @@ for x in numbers:
 print(min(numbers))
 print(max(numbers))
 print(sum(numbers))
+
+#4-10 Slices
+import random
+list_numbers = [random.randint(0,100) for _ in range(0, 10)]
+
+print(list_numbers)
+print(f"First 3 elements are: {list_numbers[:3]}")
+
+mid = len(list_numbers) // 2
+print(f"Middle 3 elements are: {list_numbers[mid - 1:mid + 2]}")
+print(f"Last 3 elements are: {list_numbers[-3:]}")
+
+#4-11 My Pizzas, Your Pizzas
+pizzas = ["hawaiian", "pepperoni", "cheese"]
+friend = pizzas[:]
+
+pizzas.append("barbeque")
+friend.append("garlic")
+
+#str.join() method instead of for loop
+print(f"My pizzas are: {', '.join(pizzas)}")
+#for p in pizzas: 
+	#print(p)
+print(f"Friend's pizzas are: {', '.join(friend)}")
+
+#4-12 More Loops 
+print("My pizzas are:")
+for p in pizzas: 
+	print(p)
+print("Friend's pizzas are:")
+for p in friend: 
+	print(p)
+
+#4-13 Tuples
+foods = ("pizza", "hamburger", "fries", "taco", "fish")
+for food in foods:
+	print(food)
+#gives error
+foods[0] = "squid"
+foods = ("sushi", "ramen", "fries", "taco", "fish")
+print(foods)
