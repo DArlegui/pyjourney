@@ -129,3 +129,55 @@ pets.append(shelly)
 for pet in pets:
     print(f"My {pet['owner']} own a {pet['pet']} their age is {pet['age']}")
 
+#6-9 Favorite Places
+favorite_places = {
+    'matt': ['pier 39', 'circus circus'],
+    'paul': ['england', 'france'],
+    'lilly': ['disneyland', 'mall']
+}
+##Conditional Expession (one-line) : results = "yes" if condition else "no"
+for k, v in favorite_places.items():
+    print(f"Hi {k.title()}, your favorite {'places' if k != 'matt' else 'countries'} are:")
+    for places in v:
+        print(f"\t{places.title()}")
+
+#6-10 Favorite Numbers
+fav_numbers = {
+    'bob': ['4','5','9'],
+    'matt': ['7','8','9'],
+    'sally': ['23','0']
+}
+
+for k,v in fav_numbers.items():
+    print(f"{k} favorite number are")
+    format = ', '.join(v) #list of strings concatenate
+    print(format)
+
+# format = '' #f-string concatenate
+# for n in v:
+#     format = f'{format} {n}'
+
+#6-11/12 List of Cities + Added a (nested) list inside a dictionary of a dictionary
+cities = {
+    'san francisco': {
+        'places': ['golden gate bridge', 'peir 39'],
+        'population': 827_526,
+        'country': 'USA'
+    },
+    'tokyo': {
+        'places': ['tokyo disneyland', 'senso-ji', 'akihabara'],
+        'population': 14_000_000,
+        'country': 'japan'
+    },
+    'shanghai': {
+        'places': ['oriental pearl tower', 'the bund'],
+        'population': 30_000_000,
+        'country': "china"
+    }
+}
+
+for city, info in cities.items():
+    format = ', '.join(info['places']).title()
+    print(f'{city.title()} has amazing places such as {format}.')
+    print(f'They have a population of {info['population']:,}.')
+    print(f'This city is located in {info['country'].title()}')
