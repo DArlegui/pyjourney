@@ -1,0 +1,15 @@
+Updating package to latest version
+$ python -m pip install --upgrade package_name
+
+Installing third-party packages
+$ python -m pip install --user package_name
+
+Installing Black Formmater Extension
+Ctrl + Shift + P
+"Preferences: Open User Settings (JSON)"
+
+"[python]": {
+  "editor.defaultFormatter": "ms-python.black-formatter"
+} 
+
+pip install black

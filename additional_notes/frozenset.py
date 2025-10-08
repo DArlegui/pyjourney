@@ -1,0 +1,5 @@
+fs = frozenset(["z", "a", "m", "b", "y"])
+fs1 = frozenset(["y", "a", "b", "m", "z"])
+print("fs :", fs)
+print("fs1:", fs1)
+print("fs == fs1:", fs1 == fs)  # True (order-insensitive)

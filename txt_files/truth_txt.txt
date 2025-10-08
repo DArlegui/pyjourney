@@ -1,0 +1,19 @@
+TRUTH_TABLES = """
+✅ AND (and)
+A and B is True only if BOTH are True.
+
+| A | B | A and B |
+| T | T |   T     |
+| T | F |   F     |
+| F | T |   F     |
+| F | F |   F     |
+
+✅ OR (or)
+A or B is True if AT LEAST one is True.
+
+| A | B |  A or B |
+| T | T |    T    |
+| T | F |    T    |
+| F | T |    T    |
+| F | F |    F    |
+"""
